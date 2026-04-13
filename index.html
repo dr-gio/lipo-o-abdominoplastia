@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cirugía Abdominal Barranquilla | 440 Clinic · Dr. Gio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --azul:#26364D;
+  --azul2:#536E83;
+  --azul3:#7A9BB5;
+  --azul4:#DDE6ED;
+  --dorado:#A27B5A;
+  --dorado2:#C9A882;
+  --blanco:#FFFFFF;
+  --fondo:#F0F4F7;
+  --wa:#25D366;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--fondo);color:var(--azul);overflow-x:hidden}
+
+/* WA FLOAT */
+.wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9000;display:flex;align-items:center;gap:.6rem;background:var(--wa);padding:.85rem 1.4rem .85rem 1rem;border-radius:60px;text-decoration:none;color:#fff;font-weight:700;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 8px 32px rgba(37,211,102,.5);animation:wap 2.5s ease-in-out infinite;transition:transform .2s}
+.wa-float:hover{transform:scale(1.05)}
+.wa-float svg{width:20px;height:20px;fill:#fff;flex-shrink:0}
+@keyframes wap{0%,100%{box-shadow:0 8px 32px rgba(37,211,102,.45)}50%{box-shadow:0 8px 52px rgba(37,211,102,.8)}}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:8000;background:rgba(240,244,247,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(38,54,77,.08);padding:1rem 3rem;display:flex;align-items:center;justify-content:space-between;transition:padding .3s}
+.nlogo{display:inline-flex;align-items:center;text-decoration:none}
+.nlogo span{color:var(--dorado)}
+.nwa{display:inline-flex;align-items:center;gap:.5rem;background:var(--wa);color:#fff;padding:.6rem 1.4rem;border-radius:40px;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:opacity .2s}
+.nwa:hover{opacity:.85}
+.nwa svg{width:15px;height:15px;fill:#fff}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(145deg,#1A2535 0%,#26364D 50%,#2E4A6A 100%);position:relative;overflow:hidden;padding:7rem 3rem 4rem}
+.hero-bg-circle{position:absolute;border-radius:50%;filter:blur(80px);opacity:.2}
+.hc1{width:600px;height:600px;background:var(--azul3);top:-100px;right:-100px;animation:pulse 8s ease-in-out infinite}
+.hc2{width:400px;height:400px;background:var(--dorado);bottom:-50px;left:5%;animation:pulse 6s ease-in-out 2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
+.hero-inner{max-width:1100px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:.6rem;font-size:.7rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--dorado2);margin-bottom:1.5rem}
+.hero-badge::before{content:'';display:block;width:24px;height:1px;background:var(--dorado)}
+.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,5rem);line-height:1;font-weight:700;color:#fff;letter-spacing:-.02em;margin-bottom:1.5rem}
+.hero-h1 em{font-style:italic;color:var(--azul3);display:block}
+.hero-question{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-left:3px solid var(--dorado);padding:1.5rem 1.8rem;margin-bottom:2rem}
+.hero-question p{font-size:1rem;font-weight:300;color:rgba(255,255,255,.85);line-height:1.7}
+.hero-question strong{color:#fff;font-weight:600}
+.hero-cta-wrap{display:flex;flex-direction:column;gap:.8rem}
+.btn-wa{display:inline-flex;align-items:center;justify-content:center;gap:.7rem;background:var(--wa);color:#fff;padding:1.1rem 2.4rem;font-size:.9rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 32px rgba(37,211,102,.4)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(37,211,102,.6)}
+.btn-wa svg{width:20px;height:20px;fill:#fff;flex-shrink:0}
+.hero-micro{font-size:.72rem;color:rgba(255,255,255,.4);letter-spacing:.06em}
+
+/* HERO RIGHT — Decisión visual */
+.decision-box{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:2rem}
+.decision-title{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--dorado2);margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
+.decision-title::before{content:'';display:block;width:16px;height:1px;background:var(--dorado)}
+.decision-item{display:flex;align-items:flex-start;gap:1rem;padding:1.2rem 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.decision-item:last-child{border-bottom:none}
+.decision-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:rgba(255,255,255,.08);line-height:1;flex-shrink:0;width:40px}
+.decision-content{}
+.decision-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:.3rem}
+.decision-desc{font-size:.8rem;font-weight:300;color:rgba(255,255,255,.5);line-height:1.6}
+.decision-tag{display:inline-block;margin-top:.5rem;font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--dorado2);border:1px solid rgba(162,123,90,.3);padding:.2rem .6rem}
+
+/* SECCIÓN — ¿CUÁL ES PARA TI? */
+#cual{padding:7rem 3rem;background:#fff}
+.cual-inner{max-width:1100px;margin:0 auto}
+.slbl{font-size:.65rem;letter-spacing:.26em;text-transform:uppercase;color:var(--dorado);margin-bottom:1rem;display:flex;align-items:center;gap:.7rem}
+.slbl::before{content:'';display:block;width:20px;height:1px;background:var(--dorado)}
+.sh2{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,4vw,3.8rem);font-weight:700;color:var(--azul);letter-spacing:-.02em;line-height:1.05;margin-bottom:1rem}
+.sh2 em{color:var(--azul2);font-style:italic}
+.sp{font-size:.92rem;font-weight:300;color:var(--azul2);line-height:1.85;max-width:560px;margin-bottom:3rem}
+
+.comparacion{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:2rem}
+.proc-card{padding:2.5rem;position:relative;overflow:hidden}
+.proc-card.lipo{background:var(--azul4)}
+.proc-card.abdo{background:var(--azul);color:#fff}
+.proc-icon{font-size:2.5rem;margin-bottom:1rem}
+.proc-name{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;margin-bottom:.5rem}
+.proc-card.abdo .proc-name{color:#fff}
+.proc-sub{font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--dorado);margin-bottom:1.2rem}
+.proc-desc{font-size:.88rem;font-weight:300;line-height:1.8;color:var(--azul2)}
+.proc-card.abdo .proc-desc{color:rgba(255,255,255,.65)}
+.proc-ideal{margin-top:1.5rem;padding:1rem 1.2rem;background:rgba(38,54,77,.06)}
+.proc-card.abdo .proc-ideal{background:rgba(255,255,255,.06)}
+.proc-ideal-label{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--dorado);margin-bottom:.5rem}
+.proc-ideal-text{font-size:.82rem;font-weight:300;color:var(--azul);line-height:1.6}
+.proc-card.abdo .proc-ideal-text{color:rgba(255,255,255,.75)}
+.proc-checks{display:flex;flex-direction:column;gap:.5rem;margin-top:1.2rem}
+.proc-check{display:flex;align-items:center;gap:.7rem;font-size:.8rem;font-weight:300;color:var(--azul2)}
+.proc-card.abdo .proc-check{color:rgba(255,255,255,.6)}
+.chk{width:16px;height:16px;border:1px solid var(--dorado);display:flex;align-items:center;justify-content:center;font-size:.55rem;color:var(--dorado);flex-shrink:0}
+
+.respuesta-box{margin-top:3px;background:linear-gradient(135deg,var(--azul) 0%,#2E4A6A 100%);padding:2.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.respuesta-text{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:#fff;line-height:1.3}
+.respuesta-text em{color:var(--azul3);font-style:italic}
+.respuesta-sub{font-size:.82rem;font-weight:300;color:rgba(255,255,255,.55);margin-top:.5rem}
+
+/* DR GIO */
+#drgio{padding:7rem 3rem;background:var(--fondo)}
+.drgio-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.drgio-photo{aspect-ratio:4/5;background:linear-gradient(160deg,#1A2B3E,#26364D);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.drgio-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top center}
+.drgio-av{font-family:'Playfair Display',serif;font-size:4rem;color:rgba(255,255,255,.1);font-weight:700}
+.drgio-bar{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(13,24,37,.98) 60%,transparent);padding:2rem 1.5rem 1.5rem}
+.drgio-name{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:#fff}
+.drgio-title{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dorado2);margin-top:.2rem}
+.drgio-content{}
+.drgio-quote{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,2.5vw,2.5rem);font-weight:700;color:var(--azul);line-height:1.1;letter-spacing:-.01em;margin-bottom:1.5rem}
+.drgio-quote em{color:var(--azul2);font-style:italic}
+.drgio-p{font-size:.9rem;font-weight:300;color:var(--azul2);line-height:1.9;margin-bottom:1rem}
+.certs{display:flex;flex-direction:column;gap:.6rem;margin:1.8rem 0}
+.cert{display:flex;align-items:center;gap:.8rem;font-size:.82rem;font-weight:300;color:var(--azul)}
+.cmark{width:16px;height:16px;border:1px solid var(--dorado);display:flex;align-items:center;justify-content:center;font-size:.55rem;color:var(--dorado);flex-shrink:0}
+
+/* PROCESO */
+#proceso{padding:7rem 3rem;background:var(--azul)}
+.proceso-inner{max-width:1100px;margin:0 auto}
+.proceso-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:3rem}
+.paso{background:rgba(255,255,255,.04);padding:2rem 1.5rem;border-top:2px solid rgba(162,123,90,.3);transition:background .3s}
+.paso:hover{background:rgba(255,255,255,.07)}
+.paso-num{font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;color:rgba(255,255,255,.06);line-height:1;margin-bottom:1rem}
+.paso-title{font-size:.9rem;font-weight:600;color:#fff;margin-bottom:.5rem;letter-spacing:.02em}
+.paso-desc{font-size:.78rem;font-weight:300;color:rgba(255,255,255,.45);line-height:1.7}
+.paso-free{display:inline-block;margin-top:.8rem;font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--dorado2);border:1px solid rgba(162,123,90,.3);padding:.2rem .6rem}
+
+/* FAQ */
+#faq{padding:6rem 3rem;background:#fff}
+.faq-inner{max-width:800px;margin:0 auto}
+.faq-list{display:flex;flex-direction:column;gap:2px;margin-top:2.5rem}
+.fi{background:var(--fondo);border-left:3px solid transparent;transition:border-color .2s}
+.fi[open]{border-left-color:var(--dorado)}
+.fi summary{padding:1.2rem 1.5rem;cursor:pointer;font-size:.9rem;font-weight:500;color:var(--azul);list-style:none;display:flex;justify-content:space-between;align-items:center;transition:color .2s}
+.fi summary:hover{color:var(--dorado)}
+.fi summary::-webkit-details-marker{display:none}
+.fi summary::after{content:'+';font-size:1.2rem;color:var(--dorado);flex-shrink:0;transition:transform .3s}
+.fi[open] summary::after{transform:rotate(45deg)}
+.fi p{padding:0 1.5rem 1.2rem;font-size:.84rem;font-weight:300;line-height:1.8;color:var(--azul2)}
+
+/* CTA FINAL */
+#cta-final{padding:8rem 3rem;background:linear-gradient(145deg,#1A2535 0%,#26364D 100%);text-align:center;position:relative;overflow:hidden}
+#cta-final::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(122,155,181,.15) 0%,transparent 70%)}
+.cta-eyebrow{font-size:.65rem;letter-spacing:.26em;text-transform:uppercase;color:var(--dorado2);margin-bottom:1.5rem;display:flex;align-items:center;justify-content:center;gap:.8rem}
+.cta-eyebrow::before,.cta-eyebrow::after{content:'';display:block;width:16px;height:1px;background:var(--dorado)}
+.cta-h2{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,5rem);font-weight:700;color:#fff;letter-spacing:-.02em;line-height:1.05;margin-bottom:1rem;position:relative;z-index:1}
+.cta-h2 em{font-style:italic;color:var(--azul3);display:block}
+.cta-sub{font-size:1rem;font-weight:300;color:rgba(255,255,255,.6);line-height:1.8;max-width:520px;margin:0 auto 2.5rem;position:relative;z-index:1}
+.cta-disclaimer{margin-top:1rem;font-size:.7rem;color:rgba(255,255,255,.3);letter-spacing:.04em;position:relative;z-index:1}
+
+/* FOOTER */
+footer{background:#0D1520;padding:2rem 3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem}
+.flogo{font-family:'DM Sans',sans-serif;font-size:.8rem;letter-spacing:.2em;color:rgba(255,255,255,.7);font-weight:500;text-transform:uppercase}
+.flogo span{color:var(--dorado)}
+.ftag{font-size:.6rem;font-style:italic;color:rgba(255,255,255,.3);margin-top:.2rem}
+footer p{font-size:.65rem;color:rgba(255,255,255,.3)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.reveal.on{opacity:1;transform:none}
+.r1{transition-delay:.1s}.r2{transition-delay:.2s}.r3{transition-delay:.3s}.r4{transition-delay:.4s}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:.8rem 1.4rem}
+  #hero{padding:6rem 1.4rem 3rem}
+  .hero-inner{grid-template-columns:1fr;gap:2.5rem}
+  .decision-box{display:none}
+  .comparacion{grid-template-columns:1fr}
+  .respuesta-box{flex-direction:column}
+  .drgio-inner{grid-template-columns:1fr;gap:2.5rem}
+  .drgio-photo{aspect-ratio:4/3}
+  .proceso-grid{grid-template-columns:1fr 1fr;gap:2px}
+  #cual,#drgio,#proceso,#faq,#cta-final{padding:4rem 1.4rem}
+  footer{padding:1.5rem 1.4rem;flex-direction:column;align-items:flex-start}
+  .sh2{font-size:2rem}
+}
+@media(max-width:600px){
+  .proceso-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- WA FLOTANTE -->
+<a class="wa-float" href="https://wa.me/573181800130?text=Hola!%20Quiero%20información%20sobre%20cirugía%20abdominal%20🌟" target="_blank">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.849L.057 23.571a.75.75 0 00.918.919l5.741-1.473A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-4.964-1.362l-.356-.212-3.685.945.982-3.597-.232-.37A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+  Hablar con asesora
+</a>
+
+<!-- NAV -->
+<nav>
+  <a class="nlogo" href="#hero"><img src="data:image/png;base64,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" style="height:40px;width:auto;display:block" alt="Dr. Gio"></a>
+  <a class="nwa" href="https://wa.me/573181800130?text=Quiero%20mi%20asesoría%20gratuita%20de%20cirugía%20abdominal" target="_blank">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.849L.057 23.571a.75.75 0 00.918.919l5.741-1.473A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-4.964-1.362l-.356-.212-3.685.945.982-3.597-.232-.37A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+    Asesoría gratuita
+  </a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-circle hc1"></div>
+  <div class="hero-bg-circle hc2"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">440 Clinic · Barranquilla · Dr. Gio</div>
+      <h1 class="hero-h1">
+        ¿Lipo o abdominoplastia?
+        <em>Solo el Dr. Gio lo sabe.</em>
+      </h1>
+      <div class="hero-question">
+        <p>Muchas mujeres no saben cuál procedimiento necesitan — y eso es <strong>completamente normal.</strong> La diferencia la hace una valoración médica, no Google.</p>
+      </div>
+      <div class="hero-cta-wrap">
+        <a class="btn-wa" href="https://wa.me/573181800130?text=Hola!%20Quiero%20mi%20asesoría%20gratuita%20para%20saber%20si%20necesito%20lipo%20o%20abdominoplastia%20🌟" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.849L.057 23.571a.75.75 0 00.918.919l5.741-1.473A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-4.964-1.362l-.356-.212-3.685.945.982-3.597-.232-.37A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+          Quiero mi asesoría gratuita
+        </a>
+        <p class="hero-micro">Asesoría virtual · Sin costo · Respuesta en minutos</p>
+      </div>
+    </div>
+    <div class="decision-box">
+      <div class="decision-title">Los dos procedimientos</div>
+      <div class="decision-item">
+        <div class="decision-num">01</div>
+        <div class="decision-content">
+          <div class="decision-name">Liposucción</div>
+          <div class="decision-desc">Elimina grasa localizada. Ideal cuando la piel tiene buena elasticidad y el problema es el volumen.</div>
+          <span class="decision-tag">Recuperación rápida</span>
+        </div>
+      </div>
+      <div class="decision-item">
+        <div class="decision-num">02</div>
+        <div class="decision-content">
+          <div class="decision-name">Abdominoplastia</div>
+          <div class="decision-desc">Retira el exceso de piel y tensa los músculos. Para piel flácida post-embarazo o pérdida de peso.</div>
+          <span class="decision-tag">Resultado más completo</span>
+        </div>
+      </div>
+      <div class="decision-item">
+        <div class="decision-num">03</div>
+        <div class="decision-content">
+          <div class="decision-name">Lipo + Abdominoplastia</div>
+          <div class="decision-desc">Cuando se necesitan los dos. La combinación más solicitada para resultados definitivos.</div>
+          <span class="decision-tag">Transformación total</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ¿CUÁL ES PARA TI? -->
+<section id="cual">
+  <div class="cual-inner">
+    <div class="slbl reveal">La diferencia importa</div>
+    <h2 class="sh2 reveal">¿Cuál procedimiento<br><em>necesitas realmente?</em></h2>
+    <p class="sp reveal">No todas las barrigas son iguales. El problema puede ser grasa, piel flácida, músculos separados — o los tres. Solo una evaluación médica lo determina.</p>
+
+    <div class="comparacion">
+      <div class="proc-card lipo reveal r1">
+        <div class="proc-icon">✦</div>
+        <div class="proc-name">Liposucción</div>
+        <div class="proc-sub">Elimina grasa · Moldea el cuerpo</div>
+        <p class="proc-desc">Extrae depósitos de grasa localizados que no responden a dieta ni ejercicio. No retira piel ni corrige flacidez — por eso la selección correcta de paciente es clave.</p>
+        <div class="proc-ideal">
+          <div class="proc-ideal-label">Ideal para ti si...</div>
+          <div class="proc-ideal-text">Tu piel es firme, tienes grasa localizada en abdomen, flancos o espalda y tu peso es estable.</div>
+        </div>
+        <div class="proc-checks">
+          <div class="proc-check"><span class="chk">✓</span>Recuperación más corta</div>
+          <div class="proc-check"><span class="chk">✓</span>Cicatriz mínima</div>
+          <div class="proc-check"><span class="chk">✓</span>Resultados visibles desde semana 3</div>
+        </div>
+      </div>
+      <div class="proc-card abdo reveal r2">
+        <div class="proc-icon" style="color:var(--dorado2)">◈</div>
+        <div class="proc-name">Abdominoplastia</div>
+        <div class="proc-sub" style="color:var(--dorado2)">Retira piel · Tensa músculos</div>
+        <p class="proc-desc">Elimina el exceso de piel flácida y repara los músculos abdominales separados (diástasis). El procedimiento más completo para transformar el abdomen después del embarazo o pérdida de peso significativa.</p>
+        <div class="proc-ideal">
+          <div class="proc-ideal-label" style="color:var(--dorado2)">Ideal para ti si...</div>
+          <div class="proc-ideal-text">Tienes piel flácida post-embarazo, "barriguita" que no desaparece con ejercicio o pérdida de peso importante.</div>
+        </div>
+        <div class="proc-checks">
+          <div class="proc-check"><span class="chk" style="border-color:var(--dorado2);color:var(--dorado2)">✓</span>Resultados permanentes</div>
+          <div class="proc-check"><span class="chk" style="border-color:var(--dorado2);color:var(--dorado2)">✓</span>Corrige diástasis abdominal</div>
+          <div class="proc-check"><span class="chk" style="border-color:var(--dorado2);color:var(--dorado2)">✓</span>Transformación más completa</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="respuesta-box reveal">
+      <div>
+        <div class="respuesta-text">La respuesta correcta<br><em>solo la da una valoración.</em></div>
+        <div class="respuesta-sub">Nuestras asesoras te orientan sin costo. La consulta médica con el Dr. Gio define el plan exacto.</div>
+      </div>
+      <a class="btn-wa" href="https://wa.me/573181800130?text=Quiero%20saber%20qué%20procedimiento%20necesito%20🌟" target="_blank">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.849L.057 23.571a.75.75 0 00.918.919l5.741-1.473A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-4.964-1.362l-.356-.212-3.685.945.982-3.597-.232-.37A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+        Hablar con asesora gratis
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- DR GIO -->
+<section id="drgio">
+  <div class="drgio-inner">
+    <div class="drgio-photo reveal">
+      <!-- 📸 REEMPLAZA: <img src="drgio-foto.jpg" alt="Dr. Gio"> -->
+      <div class="drgio-av">GIO</div>
+      <div class="drgio-bar">
+        <div class="drgio-name">Dr. Giovanni Fuentes</div>
+        <div class="drgio-title">Cirujano Plástico · C.A.M.P.L.A.S.T.I.C.O. · Director 440 Clinic</div>
+      </div>
+    </div>
+    <div class="drgio-content reveal">
+      <div class="slbl">Tu cirujano</div>
+      <div class="drgio-quote">
+        "Cada cuerpo es diferente.<br><em>Cada plan también."</em>
+      </div>
+      <p class="drgio-p">El Dr. Giovanni Fuentes es cirujano plástico y reconstructivo certificado por la Sociedad Colombiana de Cirugía Plástica. Con años de experiencia en cirugía abdominal, ha transformado cientos de cuerpos en Barranquilla y Colombia.</p>
+      <p class="drgio-p">Su filosofía es simple: no hay procedimientos estándar porque no hay cuerpos estándar. Cada plan quirúrgico se diseña desde cero para cada paciente.</p>
+      <div class="certs">
+        <div class="cert"><span class="cmark">✓</span>Cirujano Plástico y Reconstructivo certificado</div>
+        <div class="cert"><span class="cmark">✓</span>C.A.M.P.L.A.S.T.I.C.O.</div>
+        <div class="cert"><span class="cmark">✓</span>Especialista en cirugía corporal y abdominal</div>
+        <div class="cert"><span class="cmark">✓</span>Director Científico 440 Clinic · Barranquilla</div>
+      </div>
+      <a class="btn-wa" style="display:inline-flex;margin-top:1rem" href="https://wa.me/573181800130?text=Quiero%20una%20consulta%20con%20el%20Dr.%20Gio%20🌟" target="_blank">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.849L.057 23.571a.75.75 0 00.918.919l5.741-1.473A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-4.964-1.362l-.356-.212-3.685.945.982-3.597-.232-.37A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+        Agendar consulta con el Dr. Gio
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO -->
+<section id="proceso">
+  <div class="proceso-inner">
+    <div class="slbl reveal" style="color:var(--dorado)">Cómo funciona</div>
+    <h2 class="sh2 reveal" style="color:#fff">Tu camino hacia<br><em style="color:var(--azul3)">el resultado</em></h2>
+    <div class="proceso-grid">
+      <div class="paso reveal r1">
+        <div class="paso-num">01</div>
+        <div class="paso-title">Asesoría gratuita</div>
+        <p class="paso-desc">Habla con nuestras asesoras por WhatsApp. Te orientamos, resolvemos tus dudas y evaluamos si eres candidata.</p>
+        <span class="paso-free">Sin costo</span>
+      </div>
+      <div class="paso reveal r2">
+        <div class="paso-num">02</div>
+        <div class="paso-title">Consulta con el Dr. Gio</div>
+        <p class="paso-desc">El Dr. Gio evalúa tu caso, define qué procedimiento necesitas y diseña tu plan quirúrgico personalizado.</p>
+        <span class="paso-free">Virtual o presencial</span>
+      </div>
+      <div class="paso reveal r3">
+        <div class="paso-num">03</div>
+        <div class="paso-title">Preparación</div>
+        <p class="paso-desc">Exámenes preoperatorios, indicaciones específicas y acompañamiento de nuestro equipo antes de la cirugía.</p>
+        <span class="paso-free">Equipo de apoyo</span>
+      </div>
+      <div class="paso reveal r4">
+        <div class="paso-num">04</div>
+        <div class="paso-title">Cirugía y recuperación</div>
+        <p class="paso-desc">Procedimiento en clínica certificada con seguimiento postoperatorio completo hasta tu resultado final.</p>
+        <span class="paso-free">Seguimiento incluido</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-inner">
+    <div class="slbl reveal">Resolvemos tus dudas</div>
+    <h2 class="sh2 reveal">Preguntas <em>frecuentes</em></h2>
+    <div class="faq-list">
+      <details class="fi reveal">
+        <summary>¿Cómo sé si necesito lipo o abdominoplastia?</summary>
+        <p>La diferencia principal está en la piel. Si tu piel tiene buena elasticidad, la liposucción puede ser suficiente. Si tienes piel flácida, exceso de piel o diástasis abdominal (músculos separados por el embarazo), probablemente necesitas abdominoplastia. Solo una valoración médica lo confirma con certeza.</p>
+      </details>
+      <details class="fi reveal">
+        <summary>¿La asesoría realmente es gratuita?</summary>
+        <p>Sí. La asesoría inicial con nuestras asesoras comerciales es completamente gratuita. Allí te orientamos, resolvemos tus preguntas y evaluamos tu caso. Si decides avanzar con una consulta médica formal con el Dr. Gio, esa sí tiene costo — virtual o presencial.</p>
+      </details>
+      <details class="fi reveal">
+        <summary>¿Cuánto dura la recuperación?</summary>
+        <p>La liposucción tiene una recuperación de 2-3 semanas para actividades normales. La abdominoplastia requiere 4-6 semanas. El Dr. Gio te dará indicaciones específicas según tu caso y procedimiento.</p>
+      </details>
+      <details class="fi reveal">
+        <summary>¿Los resultados son permanentes?</summary>
+        <p>Las células de grasa eliminadas no regresan. Sin embargo, si hay aumento de peso significativo después, el resultado puede verse afectado. Mantener un peso estable con hábitos saludables asegura resultados duraderos.</p>
+      </details>
+      <details class="fi reveal">
+        <summary>¿Puedo hacerme los dos procedimientos juntos?</summary>
+        <p>Sí, y de hecho es la combinación más solicitada. La lipo + abdominoplastia se realiza en el mismo tiempo quirúrgico y ofrece los resultados más completos. El Dr. Gio evaluará si eres candidata a la combinación.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ANTES Y DESPUÉS -->
+<section id="antes-despues" style="padding:7rem 3rem;background:#0D1520">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="slbl reveal" style="color:var(--dorado)">Resultados reales</div>
+    <h2 class="sh2 reveal" style="color:#fff;margin-bottom:.5rem">Antes &amp; <em style="color:var(--azul3)">Después</em></h2>
+    <p style="font-size:.9rem;font-weight:300;color:rgba(255,255,255,.4);margin-bottom:3rem;max-width:500px" class="reveal">Pacientes reales de 440 Clinic · Con consentimiento firmado · Sin filtros</p>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-bottom:3px">
+
+      <!-- SLIDER 1 -->
+      <div class="ad-card reveal r1" style="position:relative;overflow:hidden;aspect-ratio:3/4;background:#1A2535;cursor:ew-resize">
+        <div class="ad-before" style="position:absolute;inset:0;right:50%;background:linear-gradient(160deg,#2A3545,#354555);display:flex;align-items:flex-end;padding:1rem;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.25);transition:right .4s ease">Antes</div>
+        <div class="ad-after" style="position:absolute;inset:0;left:50%;background:linear-gradient(160deg,#1A2535,#26364D);display:flex;align-items:flex-end;justify-content:flex-end;padding:1rem;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);transition:left .4s ease">Después</div>
+        <div class="ad-line" style="position:absolute;left:50%;top:0;bottom:0;width:2px;background:rgba(255,255,255,.4);transform:translateX(-50%);z-index:2;transition:left .4s ease"></div>
+        <div class="ad-dot" style="position:absolute;top:50%;left:50%;z-index:3;transform:translate(-50%,-50%);width:36px;height:36px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--azul);font-weight:700;box-shadow:0 2px 12px rgba(0,0,0,.5);transition:left .4s ease">↔</div>
+        <div style="position:absolute;bottom:0;left:0;right:0;z-index:4;background:linear-gradient(to top,rgba(13,21,32,.98),transparent);padding:2rem 1.2rem 1.2rem">
+          <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#fff">Abdominoplastia</div>
+          <div style="font-size:.62rem;letter-spacing:.14em;color:var(--dorado2);text-transform:uppercase;margin-top:.2rem">Post-embarazo · 4 meses</div>
+        </div>
+        <div style="position:absolute;top:.8rem;left:.8rem;z-index:5;background:var(--dorado);color:#fff;font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.25rem .7rem">📸 Foto real próximamente</div>
+      </div>
+
+      <!-- SLIDER 2 -->
+      <div class="ad-card reveal r2" style="position:relative;overflow:hidden;aspect-ratio:3/4;background:#1A2535;cursor:ew-resize">
+        <div class="ad-before" style="position:absolute;inset:0;right:50%;background:linear-gradient(160deg,#243040,#2E3D50);display:flex;align-items:flex-end;padding:1rem;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.25);transition:right .4s ease">Antes</div>
+        <div class="ad-after" style="position:absolute;inset:0;left:50%;background:linear-gradient(160deg,#1E2D3A,#2B4050);display:flex;align-items:flex-end;justify-content:flex-end;padding:1rem;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);transition:left .4s ease">Después</div>
+        <div class="ad-line" style="position:absolute;left:50%;top:0;bottom:0;width:2px;background:rgba(255,255,255,.4);transform:translateX(-50%);z-index:2;transition:left .4s ease"></div>
+        <div class="ad-dot" style="position:absolute;top:50%;left:50%;z-index:3;transform:translate(-50%,-50%);width:36px;height:36px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--azul);font-weight:700;box-shadow:0 2px 12px rgba(0,0,0,.5);transition:left .4s ease">↔</div>
+        <div style="position:absolute;bottom:0;left:0;right:0;z-index:4;background:linear-gradient(to top,rgba(13,21,32,.98),transparent);padding:2rem 1.2rem 1.2rem">
+          <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#fff">Liposucción</div>
+          <div style="font-size:.62rem;letter-spacing:.14em;color:var(--dorado2);text-transform:uppercase;margin-top:.2rem">Abdomen y flancos · 3 meses</div>
+        </div>
+        <div style="position:absolute;top:.8rem;left:.8rem;z-index:5;background:var(--azul2);color:#fff;font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.25rem .7rem">📸 Foto real próximamente</div>
+      </div>
+
+      <!-- SLIDER 3 -->
+      <div class="ad-card reveal r3" style="position:relative;overflow:hidden;aspect-ratio:3/4;background:#1A2535;cursor:ew-resize">
+        <div class="ad-before" style="position:absolute;inset:0;right:50%;background:linear-gradient(160deg,#1E2A38,#283542);display:flex;align-items:flex-end;padding:1rem;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.25);transition:right .4s ease">Antes</div>
+        <div class="ad-after" style="position:absolute;inset:0;left:50%;background:linear-gradient(160deg,#162030,#1E3040);display:flex;align-items:flex-end;justify-content:flex-end;padding:1rem;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);transition:left .4s ease">Después</div>
+        <div class="ad-line" style="position:absolute;left:50%;top:0;bottom:0;width:2px;background:rgba(255,255,255,.4);transform:translateX(-50%);z-index:2;transition:left .4s ease"></div>
+        <div class="ad-dot" style="position:absolute;top:50%;left:50%;z-index:3;transform:translate(-50%,-50%);width:36px;height:36px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--azul);font-weight:700;box-shadow:0 2px 12px rgba(0,0,0,.5);transition:left .4s ease">↔</div>
+        <div style="position:absolute;bottom:0;left:0;right:0;z-index:4;background:linear-gradient(to top,rgba(13,21,32,.98),transparent);padding:2rem 1.2rem 1.2rem">
+          <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#fff">Lipo + Abdominoplastia</div>
+          <div style="font-size:.62rem;letter-spacing:.14em;color:var(--dorado2);text-transform:uppercase;margin-top:.2rem">Combinación · 5 meses</div>
+        </div>
+        <div style="position:absolute;top:.8rem;left:.8rem;z-index:5;background:var(--dorado);color:#fff;font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.25rem .7rem">📸 Foto real próximamente</div>
+      </div>
+
+    </div>
+    <p style="font-size:.68rem;font-style:italic;color:rgba(255,255,255,.18);text-align:center;margin-top:1rem" class="reveal">* Fotos de pacientes reales con consentimiento firmado. Resultados individuales pueden variar.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section id="testimonios" style="padding:7rem 3rem;background:#111827">
+  <div style="max-width:1100px;margin:0 auto">
+    <div class="slbl reveal" style="color:var(--dorado)">Ellas lo vivieron</div>
+    <h2 class="sh2 reveal" style="color:#fff;margin-bottom:3rem">Lo que dicen<br><em style="color:var(--azul3)">nuestras pacientes</em></h2>
+
+    <!-- TESTIMONIOS VIDEO -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-bottom:3px">
+
+      <!-- VIDEO 1 -->
+      <div style="position:relative;overflow:hidden;aspect-ratio:9/14;background:linear-gradient(160deg,#1A2B3E,#26364D);cursor:pointer" class="reveal r1">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(7,9,14,.95) 0%,rgba(7,9,14,.1) 55%,transparent 100%)"></div>
+        <!-- 🎬 REEMPLAZA: <video autoplay muted loop playsinline src="testimonio-1.mp4" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video> -->
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;border:2px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center">
+          <div style="border-left:18px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px"></div>
+        </div>
+        <div style="position:absolute;bottom:0;left:0;right:0;z-index:2;padding:1.5rem 1.2rem">
+          <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#fff">María C.</div>
+          <div style="font-size:.6rem;letter-spacing:.14em;color:rgba(255,255,255,.35);text-transform:uppercase;margin-top:.2rem">Abdominoplastia · 38 años</div>
+          <div style="font-size:.7rem;color:var(--dorado);margin-top:.3rem">★★★★★</div>
+          <p style="font-size:.78rem;font-style:italic;color:rgba(255,255,255,.6);line-height:1.6;margin-top:.5rem">"El Dr. Gio me devolvió el cuerpo que tenía antes de mis embarazos. No puedo creer el cambio."</p>
+        </div>
+        <div style="position:absolute;top:.8rem;left:.8rem;background:rgba(0,0,0,.5);color:rgba(255,255,255,.5);font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.25rem .7rem">🎬 Video próximamente</div>
+      </div>
+
+      <!-- VIDEO 2 -->
+      <div style="position:relative;overflow:hidden;aspect-ratio:9/14;background:linear-gradient(160deg,#1E2D3A,#2B4050);cursor:pointer" class="reveal r2">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(7,9,14,.95) 0%,rgba(7,9,14,.1) 55%,transparent 100%)"></div>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;border:2px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center">
+          <div style="border-left:18px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px"></div>
+        </div>
+        <div style="position:absolute;bottom:0;left:0;right:0;z-index:2;padding:1.5rem 1.2rem">
+          <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#fff">Valentina R.</div>
+          <div style="font-size:.6rem;letter-spacing:.14em;color:rgba(255,255,255,.35);text-transform:uppercase;margin-top:.2rem">Liposucción · 32 años</div>
+          <div style="font-size:.7rem;color:var(--dorado);margin-top:.3rem">★★★★★</div>
+          <p style="font-size:.78rem;font-style:italic;color:rgba(255,255,255,.6);line-height:1.6;margin-top:.5rem">"Tenía miedo pero el equipo me acompañó en todo momento. La recuperación fue mucho más fácil de lo que esperaba."</p>
+        </div>
+        <div style="position:absolute;top:.8rem;left:.8rem;background:rgba(0,0,0,.5);color:rgba(255,255,255,.5);font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.25rem .7rem">🎬 Video próximamente</div>
+      </div>
+
+      <!-- VIDEO 3 -->
+      <div style="position:relative;overflow:hidden;aspect-ratio:9/14;background:linear-gradient(160deg,#1A2535,#243245);cursor:pointer" class="reveal r3">
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(7,9,14,.95) 0%,rgba(7,9,14,.1) 55%,transparent 100%)"></div>
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;border:2px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center">
+          <div style="border-left:18px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px"></div>
+        </div>
+        <div style="position:absolute;bottom:0;left:0;right:0;z-index:2;padding:1.5rem 1.2rem">
+          <div style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#fff">Daniela M.</div>
+          <div style="font-size:.6rem;letter-spacing:.14em;color:rgba(255,255,255,.35);text-transform:uppercase;margin-top:.2rem">Lipo + Abdominoplastia · 41 años</div>
+          <div style="font-size:.7rem;color:var(--dorado);margin-top:.3rem">★★★★★</div>
+          <p style="font-size:.78rem;font-style:italic;color:rgba(255,255,255,.6);line-height:1.6;margin-top:.5rem">"Me hice los dos juntos. El resultado es exactamente lo que siempre quise. Vale cada peso."</p>
+        </div>
+        <div style="position:absolute;top:.8rem;left:.8rem;background:rgba(0,0,0,.5);color:rgba(255,255,255,.5);font-size:.55rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.25rem .7rem">🎬 Video próximamente</div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div style="text-align:center;margin-top:3rem" class="reveal">
+      <a class="btn-wa" href="https://wa.me/573181800130?text=Vi%20los%20resultados%20y%20quiero%20mi%20asesoría%20gratuita%20🌟" target="_blank" style="display:inline-flex">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.849L.057 23.571a.75.75 0 00.918.919l5.741-1.473A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-4.964-1.362l-.356-.212-3.685.945.982-3.597-.232-.37A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+        Quiero resultados como estos
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOVER SLIDERS JS -->
+<style>
+.ad-card:hover .ad-before{right:30%}
+.ad-card:hover .ad-after{left:70%}
+.ad-card:hover .ad-line{left:70%}
+.ad-card:hover .ad-dot{left:70%}
+@media(max-width:900px){
+  #antes-despues,#testimonios{padding:4rem 1.4rem}
+  #antes-despues [style*="grid-template-columns:repeat(3"],
+  #testimonios [style*="grid-template-columns:repeat(3"]{grid-template-columns:1fr!important}
+}
+</style>
+
+
+<!-- CTA FINAL -->
+<section id="cta-final">
+  <div class="cta-eyebrow reveal">440 Clinic · Barranquilla · Dr. Gio</div>
+  <h2 class="cta-h2 reveal">¿Lista para saber<br><em>cuál es tu procedimiento?</em></h2>
+  <p class="cta-sub reveal">Empieza con una asesoría gratuita. Sin compromiso, sin presión. Solo claridad sobre lo que necesitas.</p>
+  <a class="btn-wa reveal" href="https://wa.me/573181800130?text=Hola!%20Quiero%20mi%20asesoría%20gratuita%20para%20cirugía%20abdominal%20🌟" target="_blank">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.849L.057 23.571a.75.75 0 00.918.919l5.741-1.473A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-4.964-1.362l-.356-.212-3.685.945.982-3.597-.232-.37A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+    Quiero mi asesoría GRATIS
+  </a>
+  <p class="cta-disclaimer reveal">Asesoría comercial gratuita · Consulta médica con el Dr. Gio disponible virtual o presencial</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABGUAAAFSCAYAAABbrWLsAAAI3ElEQVR4nO3YMQEAIAzAsIF/z+CCHiQKenfNzBkAAAAAntp1AAAAAMCPTBkAAACAgCkDAAAAEDBlAAAAAAKmDAAAAEDAlAEAAAAImDIAAAAAAVMGAAAAIGDKAAAAAARMGQAAAICAKQMAAAAQMGUAAAAAAqYMAAAAQMCUAQAAAAiYMgAAAAABUwYAAAAgYMoAAAAABEwZAAAAgIApAwAAABAwZQAAAAACpgwAAABAwJQBAAAACJgyAAAAAAFTBgAAACBgygAAAAAETBkAAACAgCkDAAAAEDBlAAAAAAKmDAAAAEDAlAEAAAAImDIAAAAAAVMGAAAAIGDKAAAAAARMGQAAAICAKQMAAAAQMGUAAAAAAqYMAAAAQMCUAQAAAAiYMgAAAAABUwYAAAAgYMoAAAAABEwZAAAAgIApAwAAABAwZQAAAAACpgwAAABAwJQBAAAACJgyAAAAAAFTBgAAACBgygAAAAAETBkAAACAgCkDAAAAEDBlAAAAAAKmDAAAAEDAlAEAAAAImDIAAAAAAVMGAAAAIGDKAAAAAARMGQAAAICAKQMAAAAQMGUAAAAAAqYMAAAAQMCUAQAAAAiYMgAAAAABUwYAAAAgYMoAAAAABEwZAAAAgIApAwAAABAwZQAAAAACpgwAAABAwJQBAAAACJgyAAAAAAFTBgAAACBgygAAAAAETBkAAACAgCkDAAAAEDBlAAAAAAKmDAAAAEDAlAEAAAAImDIAAAAAAVMGAAAAIGDKAAAAAARMGQAAAICAKQMAAAAQMGUAAAAAAqYMAAAAQMCUAQAAAAiYMgAAAAABUwYAAAAgYMoAAAAABEwZAAAAgIApAwAAABAwZQAAAAACpgwAAABAwJQBAAAACJgyAAAAAAFTBgAAACBgygAAAAAETBkAAACAgCkDAAAAEDBlAAAAAAKmDAAAAEDAlAEAAAAImDIAAAAAAVMGAAAAIGDKAAAAAARMGQAAAICAKQMAAAAQMGUAAAAAAqYMAAAAQMCUAQAAAAiYMgAAAAABUwYAAAAgYMoAAAAABEwZAAAAgIApAwAAABAwZQAAAAACpgwAAABAwJQBAAAACJgyAAAAAAFTBgAAACBgygAAAAAETBkAAACAgCkDAAAAEDBlAAAAAAKmDAAAAEDAlAEAAAAImDIAAAAAAVMGAAAAIGDKAAAAAARMGQAAAICAKQMAAAAQMGUAAAAAAqYMAAAAQMCUAQAAAAiYMgAAAAABUwYAAAAgYMoAAAAABEwZAAAAgIApAwAAABAwZQAAAAACpgwAAABAwJQBAAAACJgyAAAAAAFTBgAAACBgygAAAAAETBkAAACAgCkDAAAAEDBlAAAAAAKmDAAAAEDAlAEAAAAImDIAAAAAAVMGAAAAIGDKAAAAAARMGQAAAICAKQMAAAAQMGUAAAAAAqYMAAAAQMCUAQAAAAiYMgAAAAABUwYAAAAgYMoAAAAABEwZAAAAgIApAwAAABAwZQAAAAACpgwAAABAwJQBAAAACJgyAAAAAAFTBgAAACBgygAAAAAETBkAAACAgCkDAAAAEDBlAAAAAAKmDAAAAEDAlAEAAAAImDIAAAAAAVMGAAAAIGDKAAAAAARMGQAAAICAKQMAAAAQMGUAAAAAAqYMAAAAQMCUAQAAAAiYMgAAAAABUwYAAAAgYMoAAAAABEwZAAAAgIApAwAAABAwZQAAAAACpgwAAABAwJQBAAAACJgyAAAAAAFTBgAAACBgygAAAAAETBkAAACAgCkDAAAAEDBlAAAAAAKmDAAAAEDAlAEAAAAImDIAAAAAAVMGAAAAIGDKAAAAAARMGQAAAICAKQMAAAAQMGUAAAAAAqYMAAAAQMCUAQAAAAiYMgAAAAABUwYAAAAgYMoAAAAABEwZAAAAgIApAwAAABAwZQAAAAACpgwAAABAwJQBAAAACJgyAAAAAAFTBgAAACBgygAAAAAETBkAAACAgCkDAAAAEDBlAAAAAAKmDAAAAEDAlAEAAAAImDIAAAAAAVMGAAAAIGDKAAAAAARMGQAAAICAKQMAAAAQMGUAAAAAAqYMAAAAQMCUAQAAAAiYMgAAAAABUwYAAAAgYMoAAAAABEwZAAAAgIApAwAAABAwZQAAAAACpgwAAABAwJQBAAAACJgyAAAAAAFTBgAAACBgygAAAAAETBkAAACAgCkDAAAAEDBlAAAAAAKmDAAAAEDAlAEAAAAImDIAAAAAAVMGAAAAIGDKAAAAAARMGQAAAICAKQMAAAAQMGUAAAAAAqYMAAAAQMCUAQAAAAiYMgAAAAABUwYAAAAgYMoAAAAABEwZAAAAgIApAwAAABAwZQAAAAACpgwAAABAwJQBAAAACJgyAAAAAAFTBgAAACBgygAAAAAETBkAAACAgCkDAAAAEDBlAAAAAAKmDAAAAEDAlAEAAAAImDIAAAAAAVMGAAAAIGDKAAAAAARMGQAAAICAKQMAAAAQMGUAAAAAAqYMAAAAQMCUAQAAAAiYMgAAAAABUwYAAAAgYMoAAAAABEwZAAAAgIApAwAAABAwZQAAAAACpgwAAABAwJQBAAAACJgyAAAAAAFTBgAAACBgygAAAAAETBkAAACAgCkDAAAAEDBlAAAAAAKmDAAAAEDAlAEAAAAImDIAAAAAAVMGAAAAIGDKAAAAAARMGQAAAICAKQMAAAAQMGUAAAAAAqYMAAAAQMCUAQAAAAiYMgAAAAABUwYAAAAgYMoAAAAABEwZAAAAgIApAwAAABAwZQAAAAACpgwAAABAwJQBAAAACJgyAAAAAAFTBgAAACBgygAAAAAETBkAAACAgCkDAAAAEDBlAAAAAAKmDAAAAEDAlAEAAAAImDIAAAAAAVMGAAAAIGDKAAAAAARMGQAAAICAKQMAAAAQMGUAAAAAAqYMAAAAQMCUAQAAAAiYMgAAAAABUwYAAAAgYMoAAAAABEwZAAAAgIApAwAAABAwZQAAAAACpgwAAABAwJQBAAAACJgyAAAAAAFTBgAAACBgygAAAAAELh+4A6OHUY+GAAAAAElFTkSuQmCC" style="height:28px;width:auto;opacity:.5;filter:invert(1)" alt="Dr. Gio">
+    <div class="ftag">La perfecta armonía de tu cuerpo · #LaBelleza440</div>
+  </div>
+  <p>© 2025 440 Clinic S.A.S. · Barranquilla, Colombia</p>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('on') });
+}, {threshold: .08});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').style.padding =
+    window.scrollY > 80 ? '.6rem 3rem' : '1rem 3rem';
+});
+</script>
+</body>
+</html>
