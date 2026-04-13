@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -26,6 +27,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--fondo);color:var(--azul);
 .wa-float{position:fixed;bottom:1.5rem;right:1.5rem;z-index:9000;display:flex;align-items:center;gap:.6rem;background:var(--wa);padding:.85rem 1.4rem .85rem 1rem;border-radius:60px;text-decoration:none;color:#fff;font-weight:700;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 8px 32px rgba(37,211,102,.5);animation:wap 2.5s ease-in-out infinite;transition:transform .2s}
 .wa-float:hover{transform:scale(1.05)}
 .wa-float svg{width:20px;height:20px;fill:#fff;flex-shrink:0}
+@keyframes fu{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes fi{from{opacity:0}to{opacity:1}}
 @keyframes wap{0%,100%{box-shadow:0 8px 32px rgba(37,211,102,.45)}50%{box-shadow:0 8px 52px rgba(37,211,102,.8)}}
 
 /* NAV */
@@ -36,12 +39,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:8000;background:rgba(240,244,247
 .nwa:hover{opacity:.85}
 .nwa svg{width:15px;height:15px;fill:#fff}
 
-/* HERO */
-#hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(145deg,#1A2535 0%,#26364D 50%,#2E4A6A 100%);position:relative;overflow:hidden;padding:7rem 3rem 4rem}
-.hero-bg-circle{position:absolute;border-radius:50%;filter:blur(80px);opacity:.2}
-.hc1{width:600px;height:600px;background:var(--azul3);top:-100px;right:-100px;animation:pulse 8s ease-in-out infinite}
-.hc2{width:400px;height:400px;background:var(--dorado);bottom:-50px;left:5%;animation:pulse 6s ease-in-out 2s infinite}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+/* HERO CINEMATOGRÁFICO */
+#hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(145deg,#0D1520 0%,#1A2535 50%,#26364D 100%);position:relative;overflow:hidden;padding:7rem 3rem 4rem}
+.hero-bg-circle{position:absolute;border-radius:50%;filter:blur(90px);opacity:.25}
+.hc1{width:700px;height:700px;background:var(--azul3);top:-150px;right:-150px;animation:bf 9s ease-in-out infinite}
+.hc2{width:500px;height:500px;background:var(--dorado);bottom:-100px;left:5%;animation:bf 7s ease-in-out 2s infinite}
+.hc3{width:350px;height:350px;background:var(--azul2);top:30%;left:-80px;animation:bf 11s ease-in-out 4s infinite}
+@keyframes bf{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-40px) scale(1.08)}}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,21,32,.5) 0%,rgba(13,21,32,.1) 40%,rgba(38,54,77,.4) 80%,rgba(13,21,32,.9) 100%);z-index:1}
+.hero-overlay2{position:absolute;inset:0;background:linear-gradient(to right,rgba(13,21,32,.6) 0%,rgba(13,21,32,.2) 50%,transparent 100%);z-index:1}
+.scanline{position:absolute;inset:0;z-index:2;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(255,255,255,.015) 3px,rgba(255,255,255,.015) 4px)}
 
 .hero-inner{max-width:1100px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:2}
 .hero-badge{display:inline-flex;align-items:center;gap:.6rem;font-size:.7rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--dorado2);margin-bottom:1.5rem}
@@ -207,17 +214,37 @@ footer p{font-size:.65rem;color:rgba(255,255,255,.3)}
 <section id="hero">
   <div class="hero-bg-circle hc1"></div>
   <div class="hero-bg-circle hc2"></div>
-  <div class="hero-inner">
+  <div class="hero-bg-circle hc3"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-overlay2"></div>
+  <div class="scanline"></div>
+  <div class="hero-inner" style="position:relative;z-index:3">
     <div>
-      <div class="hero-badge">440 Clinic · Barranquilla · Dr. Gio</div>
-      <h1 class="hero-h1">
+      <div class="hero-badge" style="opacity:0;animation:fu .8s ease .3s forwards">440 Clinic · Barranquilla · Dr. Gio</div>
+      <h1 class="hero-h1" style="opacity:0;animation:fu .9s ease .5s forwards">
         ¿Lipo o abdominoplastia?
         <em>Solo el Dr. Gio lo sabe.</em>
       </h1>
-      <div class="hero-question">
+      <div class="hero-question" style="opacity:0;animation:fu .8s ease .7s forwards">
         <p>Muchas mujeres no saben cuál procedimiento necesitan — y eso es <strong>completamente normal.</strong> La diferencia la hace una valoración médica, no Google.</p>
       </div>
-      <div class="hero-cta-wrap">
+
+      <!-- STATS --><div style="opacity:0;animation:fu .8s ease .9s forwards">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:2rem">
+        <div style="background:rgba(255,255,255,.06);padding:1.2rem 1rem;text-align:center">
+          <div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:#fff;line-height:1">500+</div>
+          <div style="font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:.3rem">Cirugías realizadas</div>
+        </div>
+        <div style="background:rgba(255,255,255,.06);padding:1.2rem 1rem;text-align:center">
+          <div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:#fff;line-height:1">10+</div>
+          <div style="font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:.3rem">Años de experiencia</div>
+        </div>
+        <div style="background:rgba(255,255,255,.06);padding:1.2rem 1rem;text-align:center">
+          <div style="font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:#fff;line-height:1">98%</div>
+          <div style="font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:.3rem">Pacientes satisfechas</div>
+        </div>
+      </div></div>
+      <div class="hero-cta-wrap" style="opacity:0;animation:fu .8s ease 1.1s forwards">
         <a class="btn-wa" href="https://wa.me/573181800130?text=Hola!%20Quiero%20mi%20asesoría%20gratuita%20para%20saber%20si%20necesito%20lipo%20o%20abdominoplastia%20🌟" target="_blank">
           <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.849L.057 23.571a.75.75 0 00.918.919l5.741-1.473A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-4.964-1.362l-.356-.212-3.685.945.982-3.597-.232-.37A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
           Quiero mi asesoría gratuita
@@ -226,13 +253,13 @@ footer p{font-size:.65rem;color:rgba(255,255,255,.3)}
       </div>
     </div>
     <div class="decision-box">
-      <div class="decision-title">Los dos procedimientos</div>
+      <div class="decision-title">Los procedimientos</div>
       <div class="decision-item">
         <div class="decision-num">01</div>
         <div class="decision-content">
-          <div class="decision-name">Liposucción</div>
-          <div class="decision-desc">Elimina grasa localizada. Ideal cuando la piel tiene buena elasticidad y el problema es el volumen.</div>
-          <span class="decision-tag">Recuperación rápida</span>
+          <div class="decision-name">Liposucción 360°</div>
+          <div class="decision-desc">Elimina grasa localizada y moldea el contorno corporal completo — abdomen, flancos, espalda y más.</div>
+          <span class="decision-tag">Contorno corporal</span>
         </div>
       </div>
       <div class="decision-item">
@@ -246,9 +273,17 @@ footer p{font-size:.65rem;color:rgba(255,255,255,.3)}
       <div class="decision-item">
         <div class="decision-num">03</div>
         <div class="decision-content">
-          <div class="decision-name">Lipo + Abdominoplastia</div>
-          <div class="decision-desc">Cuando se necesitan los dos. La combinación más solicitada para resultados definitivos.</div>
-          <span class="decision-tag">Transformación total</span>
+          <div class="decision-name">Lipotransferencia Glútea</div>
+          <div class="decision-desc">BBL — transforma tu grasa en volumen y proyección glútea. Resultados naturales con tu propio tejido.</div>
+          <span class="decision-tag">BBL · Glúteos naturales</span>
+        </div>
+      </div>
+      <div class="decision-item">
+        <div class="decision-num">04</div>
+        <div class="decision-content">
+          <div class="decision-name">Lipo-Abdominoplastia</div>
+          <div class="decision-desc">La combinación de liposucción 360° y abdominoplastia en un solo tiempo quirúrgico. El resultado más completo.</div>
+          <span class="decision-tag">Combinación definitiva</span>
         </div>
       </div>
     </div>
@@ -262,37 +297,72 @@ footer p{font-size:.65rem;color:rgba(255,255,255,.3)}
     <h2 class="sh2 reveal">¿Cuál procedimiento<br><em>necesitas realmente?</em></h2>
     <p class="sp reveal">No todas las barrigas son iguales. El problema puede ser grasa, piel flácida, músculos separados — o los tres. Solo una evaluación médica lo determina.</p>
 
-    <div class="comparacion">
+    <div class="comparacion" style="grid-template-columns:repeat(2,1fr)">
+
       <div class="proc-card lipo reveal r1">
         <div class="proc-icon">✦</div>
-        <div class="proc-name">Liposucción</div>
-        <div class="proc-sub">Elimina grasa · Moldea el cuerpo</div>
-        <p class="proc-desc">Extrae depósitos de grasa localizados que no responden a dieta ni ejercicio. No retira piel ni corrige flacidez — por eso la selección correcta de paciente es clave.</p>
+        <div class="proc-name">Liposucción 360°</div>
+        <div class="proc-sub">Elimina grasa · Moldea contorno corporal</div>
+        <p class="proc-desc">Extrae grasa localizada en abdomen, flancos, espalda y más. Moldea tu silueta completa en un solo procedimiento.</p>
         <div class="proc-ideal">
           <div class="proc-ideal-label">Ideal para ti si...</div>
-          <div class="proc-ideal-text">Tu piel es firme, tienes grasa localizada en abdomen, flancos o espalda y tu peso es estable.</div>
+          <div class="proc-ideal-text">Tienes piel firme, grasa localizada resistente al ejercicio y quieres definir tu contorno corporal.</div>
         </div>
         <div class="proc-checks">
           <div class="proc-check"><span class="chk">✓</span>Recuperación más corta</div>
-          <div class="proc-check"><span class="chk">✓</span>Cicatriz mínima</div>
-          <div class="proc-check"><span class="chk">✓</span>Resultados visibles desde semana 3</div>
+          <div class="proc-check"><span class="chk">✓</span>Resultados desde semana 3</div>
+          <div class="proc-check"><span class="chk">✓</span>Cintura, flancos y espalda</div>
         </div>
       </div>
+
       <div class="proc-card abdo reveal r2">
         <div class="proc-icon" style="color:var(--dorado2)">◈</div>
         <div class="proc-name">Abdominoplastia</div>
         <div class="proc-sub" style="color:var(--dorado2)">Retira piel · Tensa músculos</div>
-        <p class="proc-desc">Elimina el exceso de piel flácida y repara los músculos abdominales separados (diástasis). El procedimiento más completo para transformar el abdomen después del embarazo o pérdida de peso significativa.</p>
+        <p class="proc-desc">Elimina el exceso de piel y repara la diástasis abdominal. La solución definitiva para el abdomen post-embarazo.</p>
         <div class="proc-ideal">
           <div class="proc-ideal-label" style="color:var(--dorado2)">Ideal para ti si...</div>
-          <div class="proc-ideal-text">Tienes piel flácida post-embarazo, "barriguita" que no desaparece con ejercicio o pérdida de peso importante.</div>
+          <div class="proc-ideal-text">Tienes piel flácida post-embarazo o pérdida de peso, y esa "barriguita" que no desaparece con ejercicio.</div>
         </div>
         <div class="proc-checks">
-          <div class="proc-check"><span class="chk" style="border-color:var(--dorado2);color:var(--dorado2)">✓</span>Resultados permanentes</div>
           <div class="proc-check"><span class="chk" style="border-color:var(--dorado2);color:var(--dorado2)">✓</span>Corrige diástasis abdominal</div>
-          <div class="proc-check"><span class="chk" style="border-color:var(--dorado2);color:var(--dorado2)">✓</span>Transformación más completa</div>
+          <div class="proc-check"><span class="chk" style="border-color:var(--dorado2);color:var(--dorado2)">✓</span>Elimina piel sobrante</div>
+          <div class="proc-check"><span class="chk" style="border-color:var(--dorado2);color:var(--dorado2)">✓</span>Resultados permanentes</div>
         </div>
       </div>
+
+      <div class="proc-card lipo reveal r3" style="background:linear-gradient(135deg,#26364D,#2E4A6A);color:#fff">
+        <div class="proc-icon" style="color:var(--dorado2)">❋</div>
+        <div class="proc-name" style="color:#fff">Lipotransferencia Glútea</div>
+        <div class="proc-sub" style="color:var(--dorado2)">BBL · Glúteos naturales</div>
+        <p class="proc-desc" style="color:rgba(255,255,255,.65)">Usa tu propia grasa para dar volumen y proyección a los glúteos. Resultados naturales, sin implantes.</p>
+        <div class="proc-ideal" style="background:rgba(255,255,255,.06)">
+          <div class="proc-ideal-label" style="color:var(--dorado2)">Ideal para ti si...</div>
+          <div class="proc-ideal-text" style="color:rgba(255,255,255,.75)">Quieres más proyección y volumen glúteo de forma natural, usando tu propia grasa como relleno.</div>
+        </div>
+        <div class="proc-checks">
+          <div class="proc-check" style="color:rgba(255,255,255,.65)"><span class="chk" style="border-color:var(--dorado2);color:var(--dorado2)">✓</span>Sin implantes</div>
+          <div class="proc-check" style="color:rgba(255,255,255,.65)"><span class="chk" style="border-color:var(--dorado2);color:var(--dorado2)">✓</span>Resultados naturales</div>
+          <div class="proc-check" style="color:rgba(255,255,255,.65)"><span class="chk" style="border-color:var(--dorado2);color:var(--dorado2)">✓</span>Doble beneficio: lipo + glúteos</div>
+        </div>
+      </div>
+
+      <div class="proc-card abdo reveal r4" style="background:linear-gradient(135deg,#A27B5A,#8B6545);color:#fff">
+        <div class="proc-icon" style="color:#fff;opacity:.8">◉</div>
+        <div class="proc-name" style="color:#fff">Lipo-Abdominoplastia</div>
+        <div class="proc-sub" style="color:rgba(255,255,255,.7)">La combinación definitiva</div>
+        <p class="proc-desc" style="color:rgba(255,255,255,.75)">La combinación de liposucción 360° y abdominoplastia en un solo tiempo quirúrgico. Elimina grasa, retira piel sobrante y tensa los músculos — el resultado más completo para la transformación abdominal.</p>
+        <div class="proc-ideal" style="background:rgba(0,0,0,.15)">
+          <div class="proc-ideal-label" style="color:rgba(255,255,255,.8)">Ideal para ti si...</div>
+          <div class="proc-ideal-text" style="color:rgba(255,255,255,.65)">Tienes piel flácida y grasa localizada al mismo tiempo. Quieres el resultado más completo en una sola recuperación.</div>
+        </div>
+        <div class="proc-checks">
+          <div class="proc-check" style="color:rgba(255,255,255,.75)"><span class="chk" style="border-color:rgba(255,255,255,.6);color:#fff">✓</span>Lipo 360° + Abdominoplastia</div>
+          <div class="proc-check" style="color:rgba(255,255,255,.75)"><span class="chk" style="border-color:rgba(255,255,255,.6);color:#fff">✓</span>Una sola recuperación</div>
+          <div class="proc-check" style="color:rgba(255,255,255,.75)"><span class="chk" style="border-color:rgba(255,255,255,.6);color:#fff">✓</span>Resultado más impactante</div>
+        </div>
+      </div>
+
     </div>
 
     <div class="respuesta-box reveal">
@@ -324,13 +394,15 @@ footer p{font-size:.65rem;color:rgba(255,255,255,.3)}
       <div class="drgio-quote">
         "Cada cuerpo es diferente.<br><em>Cada plan también."</em>
       </div>
-      <p class="drgio-p">El Dr. Giovanni Fuentes es cirujano plástico y reconstructivo certificado por la Sociedad Colombiana de Cirugía Plástica. Con años de experiencia en cirugía abdominal, ha transformado cientos de cuerpos en Barranquilla y Colombia.</p>
+      <p class="drgio-p">El Dr. Giovanni Fuentes es cirujano plástico y reconstructivo certificado por la Sociedad Colombiana de Cirugía Plástica. Con más de 10 años de experiencia y 500+ cirugías realizadas, ha transformado cuerpos en Barranquilla, Bogotá y toda Colombia.</p>
       <p class="drgio-p">Su filosofía es simple: no hay procedimientos estándar porque no hay cuerpos estándar. Cada plan quirúrgico se diseña desde cero para cada paciente.</p>
       <div class="certs">
         <div class="cert"><span class="cmark">✓</span>Cirujano Plástico y Reconstructivo certificado</div>
         <div class="cert"><span class="cmark">✓</span>C.A.M.P.L.A.S.T.I.C.O.</div>
         <div class="cert"><span class="cmark">✓</span>Especialista en cirugía corporal y abdominal</div>
-        <div class="cert"><span class="cmark">✓</span>Director Científico 440 Clinic · Barranquilla</div>
+        <div class="cert"><span class="cmark">✓</span>Opera en Barranquilla, Bogotá y Medellín</div>
+        <div class="cert"><span class="cmark">✓</span>440 Clinic · Barranquilla — sede principal</div>
+        <div class="cert"><span class="cmark">✓</span>Consulta virtual para todo el mundo</div>
       </div>
       <a class="btn-wa" style="display:inline-flex;margin-top:1rem" href="https://wa.me/573181800130?text=Quiero%20una%20consulta%20con%20el%20Dr.%20Gio%20🌟" target="_blank">
         <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.849L.057 23.571a.75.75 0 00.918.919l5.741-1.473A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-4.964-1.362l-.356-.212-3.685.945.982-3.597-.232-.37A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
