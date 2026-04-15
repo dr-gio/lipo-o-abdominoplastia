@@ -46,7 +46,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:8000;background:rgba(240,244,247
 .hc3{width:350px;height:350px;background:var(--azul2);top:30%;left:-80px;animation:bf 11s ease-in-out 4s infinite}
 @keyframes bf{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-40px) scale(1.08)}}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(13,21,32,.5) 0%,rgba(13,21,32,.1) 40%,rgba(38,54,77,.4) 80%,rgba(13,21,32,.9) 100%);z-index:1}
-.hero-overlay2{position:absolute;inset:0;background:linear-gradient(to right,rgba(13,21,32,.6) 0%,rgba(13,21,32,.2) 50%,transparent 100%);z-index:1}
+.hero-overlay2{position:absolute;inset:0;background:linear-gradient(to right,rgba(13,21,32,.75) 0%,rgba(13,21,32,.3) 60%,transparent 100%);z-index:1}
 .scanline{position:absolute;inset:0;z-index:2;pointer-events:none;background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(255,255,255,.015) 3px,rgba(255,255,255,.015) 4px)}
 
 .hero-inner{max-width:1100px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:2}
@@ -220,6 +220,15 @@ footer p{font-size:.65rem;color:rgba(255,255,255,.3)}
   <div class="hero-bg-circle hc1"></div>
   <div class="hero-bg-circle hc2"></div>
   <div class="hero-bg-circle hc3"></div>
+  <!-- VIDEO FONDO HERO -->
+  <div style="position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none">
+    <iframe 
+      src="https://www.youtube-nocookie.com/embed/prSbbL4SkU0?autoplay=1&mute=1&loop=1&playlist=prSbbL4SkU0&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+      style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:177.78vh;height:100vh;min-width:100%;min-height:56.25vw;border:none;pointer-events:none"
+      allow="autoplay;encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </div>
   <div class="hero-overlay"></div>
   <div class="hero-overlay2"></div>
   <div class="scanline"></div>
@@ -623,30 +632,6 @@ footer p{font-size:.65rem;color:rgba(255,255,255,.3)}
 </section>
 
 
-
-
-<!-- VIDEO DR GIO -->
-<section style="padding:5rem 3rem;background:#0D1520">
-  <div style="max-width:900px;margin:0 auto">
-    <div class="slbl reveal" style="color:var(--dorado);justify-content:center;text-align:center;margin-bottom:1rem">El Dr. Gio te explica</div>
-    <h2 class="sh2 reveal" style="color:#fff;text-align:center;margin-bottom:.5rem">¿Lipo o abdominoplastia?<br><em style="color:var(--azul3)">La respuesta que necesitas.</em></h2>
-    <p style="font-size:.9rem;font-weight:300;color:rgba(255,255,255,.45);text-align:center;margin-bottom:2.5rem" class="reveal">El Dr. Giovanni Fuentes te explica en 60 segundos cómo saber cuál procedimiento es para ti.</p>
-    <div class="reveal" style="position:relative;width:100%;aspect-ratio:16/9;background:#111827;overflow:hidden">
-      <iframe 
-        src="https://www.youtube-nocookie.com/embed/prSbbL4SkU0?rel=0&modestbranding=1" 
-        style="position:absolute;inset:0;width:100%;height:100%;border:none"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-    <div style="text-align:center;margin-top:2rem" class="reveal">
-      <a class="btn-wa" href="https://wa.me/573181800130?text=Vi%20el%20video%20del%20Dr.%20Gio%20y%20quiero%20mi%20asesoría%20gratuita%20🌟" target="_blank" style="display:inline-flex">
-        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.849L.057 23.571a.75.75 0 00.918.919l5.741-1.473A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.718 9.718 0 01-4.964-1.362l-.356-.212-3.685.945.982-3.597-.232-.37A9.718 9.718 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
-        Quiero mi asesoría gratuita
-      </a>
-    </div>
-  </div>
-</section>
 
 <!-- ANTES Y DESPUÉS --><!-- CTA FINAL -->
 <section id="cta-final">
