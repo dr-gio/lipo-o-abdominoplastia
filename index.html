@@ -230,8 +230,8 @@ footer p{font-size:.65rem;color:rgba(255,255,255,.3)}
         ¿Lipo o abdominoplastia?
         <em>Solo el Dr. Gio lo sabe.</em>
       </h1>
-      <div style="opacity:0;animation:fu .8s ease .7s forwards;position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;margin-bottom:.5rem">
-        <div id="yt-hero-player"></div>
+      <div style="opacity:0;animation:fu .8s ease .7s forwards;position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;margin-bottom:1rem;max-height:320px">
+        <iframe src="https://www.youtube-nocookie.com/embed/prSbbL4SkU0?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1&controls=1" style="position:absolute;inset:0;width:100%;height:100%;border:none" allow="autoplay;encrypted-media;picture-in-picture" allowfullscreen></iframe>
       </div>
 
       <!-- STATS --><div style="opacity:0;animation:fu .8s ease .9s forwards">
@@ -777,43 +777,6 @@ window.addEventListener('scroll', () => {
   document.querySelector('nav').style.padding =
     window.scrollY > 80 ? '.6rem 3rem' : '1rem 3rem';
 });
-</script>
-
-<script>
-// YouTube IFrame API — autoplay inmediato al cargar
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-var ytPlayer;
-function onYouTubeIframeAPIReady() {
-  ytPlayer = new YT.Player('yt-hero-player', {
-    videoId: 'prSbbL4SkU0',
-    playerVars: {
-      autoplay: 1,
-      mute: 1,
-      controls: 1,
-      rel: 0,
-      modestbranding: 1,
-      playsinline: 1,
-      loop: 0
-    },
-    events: {
-      onReady: function(e) {
-        e.target.mute();
-        e.target.playVideo();
-      }
-    }
-  });
-}
-
-// Fallback — force play on any interaction
-document.addEventListener('click', function() {
-  if(ytPlayer && ytPlayer.getPlayerState && ytPlayer.getPlayerState() !== 1) {
-    ytPlayer.playVideo();
-  }
-}, { once: true });
 </script>
 </body>
 </html>
